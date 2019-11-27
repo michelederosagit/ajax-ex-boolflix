@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boolflix</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link rel="stylesheet" href="assets/css/flag-icon.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" 
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="head container d-flex justify-content-around align-items-center flex-wrap">
+            <div id="logo">BoolFlix</div>
+            <div class="search d-flex align-items-center justify-content-center">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-bar" placeholder="Cerca...">
+                <button type="submit" id="search-button">Cerca</button>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="movieListBox">
+        <div id="movieList" class="container-fluid d-flex flex-row align-items-center flex-wrap justify-content-around">
+        </div>
+
+        <div id="tvSeriesList" class="container-fluid d-flex flex-row align-items-center flex-wrap justify-content-around">
+        </div>   
+    </div>
+
+    <script id="movieDetails" type="text/x-handlebars-template">
+        <div class="movie d-flex flex-column">
+            <img class="movie-img" src="{{urlImg}}" alt="">
+            <ul class="movie-info">
+                <li class="movie-title"><strong>Titolo</strong>: {{title}}</li>
+                <li><strong>Titolo Originale</strong>: {{originalTitle}}</li>
+                <li><strong>Lingua Originale</strong>: <span class="flag-icon flag-icon-{{language}}"></span></li>
+                <li><strong>Voto</strong>: {{{vote}}}</li>
+                <li><strong>Data Rilascio</strong>: {{dataRilascio}}</li>
+            </ul>
+        </div>
+    </script>
+
+    <script id="TvSeriesDetails" type="text/x-handlebars-template">
+        <div class="tvSeries d-flex flex-column">
+            <img class="movie-img" src="{{urlImg}}" alt="">
+            <ul class="tvSeries-info">
+                <li><strong>Titolo</strong>: {{title}}</li>
+                <li><span><strong>Titolo Originale</strong>: {{originalName}}</span></li>
+                <li><strong>Lingua Originale</strong>: <span class="flag-icon flag-icon-{{language}}"></span></li>
+                <li><strong>Voto</strong>: <span>{{{vote}}}</span></li>
+                <li><strong>Data Rilascio</strong>: {{dataRilascio}}</li>
+            </ul>
+        </div>
+    </script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

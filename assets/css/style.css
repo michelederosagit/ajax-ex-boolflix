@@ -1,0 +1,96 @@
+/* Regole Generali */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+/* Header */
+header {
+    min-height: 10vh;
+    width: 100%;
+    background-color: #000000;
+}
+
+#logo{
+    color: red;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 1.5rem;
+    width: 40%;
+    max-width: 400px;
+    margin: 0.5rem 0;
+  }
+
+    /* Search */
+
+#search-button {
+    font-size: inherit;
+    max-width: 100px;
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+  }
+
+  #search-button {
+      color: #ffffff;
+      background: red;
+  }
+  
+  .search {
+    background: white; 
+    margin: 0.5rem 0;
+  }
+
+  #search-bar {
+      max-width: 200px;
+      border: none;
+      font-size: inherit;
+  }
+
+  .fa-search {
+    padding: 0.5rem;
+  }
+
+/* Lista Film e Serie TV*/
+.movieListBox {
+    height: 100%;
+    background-color: rgb(58, 55, 55);
+}
+
+.movie img, .tvSeries img {
+    width: 100%;
+    height: 480px;
+    background: black;
+    border: 1px solid #ffffff;
+}
+
+.movie, .tvSeries {
+    width: 340px;
+    margin: 1.5%;
+    position: relative;
+}
+
+.movie-info,  .tvSeries-info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    width: 70%;
+}
+
+.movie-info > li, .tvSeries-info > li {
+    color: white;
+    list-style: none;
+    line-height: 2rem;
+}
+
+.movie:hover .movie-img,  .tvSeries:hover .movie-img {
+    opacity: 0.3;
+}
+
+.movie:hover > ul, .tvSeries:hover > ul {
+    display: block;
+}
